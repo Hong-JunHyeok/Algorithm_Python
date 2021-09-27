@@ -10,4 +10,4 @@ maximum = a
 if b > maximum: maximum = b
 if c > maximum: maximum = c
 
-print(f"최대값은 {maximum}입니다")
+print(f'최대값은 {maximum}입니다')
