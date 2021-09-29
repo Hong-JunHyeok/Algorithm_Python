@@ -1,6 +1,4 @@
-import time
-
-
+# 이진 탐색
 def is_sorted(array):
     """
     배열이 오름차순으로 정렬되어 있는지 확인하세요. (array의 요소는 int/float 숫자형입니다.)
@@ -51,13 +49,9 @@ B = (1, 6, 7, 8, 2)
 print(f'A 정렬 여부: {is_sorted(A)}')
 print(f'B 정렬 여부: {is_sorted(B)}')
 
-# time.sleep(2)
-
 # A에서 16 찾기
 result = binary_search(A, 16, 0, len(A) - 1)
 print(f'A에서 16 찾기: {result}')
-
-# time.sleep(2)
 
 # A에서 56 찾기
 result = binary_search(A, 56, 0, len(A) - 1)
