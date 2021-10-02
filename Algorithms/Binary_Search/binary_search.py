@@ -1,3 +1,5 @@
+
+
 # 이진 탐색
 def is_sorted(array):
     """
