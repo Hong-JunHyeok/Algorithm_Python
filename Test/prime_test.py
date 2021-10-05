@@ -1,23 +1,29 @@
-def print_prime():
-    counter = 0
+def solution(n):
+    if n == 0 or n == 1:
+        return 0
+    if n == 2:
+        return 1
+
     ptr = 0
-    prime = [None] * 1000
+    prime = [None] * n
 
     prime[ptr] = 2
     ptr += 1
 
-    for i in range(3, 1001, 2):
-        for n in range(1, ptr):
-            if i % prime[n] == 0:
-                # 소수가 아닌 경우
+    prime[ptr] = 3
+    ptr += 1
+
+    for num in range(5, n + 1, 2):
+        i = 1
+        while prime[i] * prime[i] <= num:
+            if num % prime[i] == 0:
                 break
+            i += 1
         else:
-            prime[ptr] = i
+            prime[ptr] = num
             ptr += 1
-
-    for i in range(ptr):
-        print(prime[i])
+    return ptr
 
 
-if __name__ == "__main__":
-    print_prime()
+if __name__ == '__main__':
+    solution(0)
